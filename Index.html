@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  background-color: lightblue;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Game</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
+    }
+    button {
+      font-size: 24px;
+      padding: 16px 32px;
+      border-radius: 12px;
+      border: none;
+      background-color: #2e7d32;
+      color: white;
+    }
+    #score {
+      font-size: 32px;
+      margin: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>My First Game</h1>
-<button>PLAY GAME</button>
-  
- 
+  <h1>My First Game</h1>
+  <div id="score">Score: 0</div>
+  <button id="playBtn">PLAY GAME</button>
+
+  <script>
+    let score = 0;
+    const scoreText = document.getElementById("score");
+    const button = document.getElementById("playBtn");
+
+    button.addEventListener("click", function () {
+      score = score + 1;
+      scoreText.textContent = "Score: " + score;
+    });
+  </script>
+
 </body>
 </html>
-
